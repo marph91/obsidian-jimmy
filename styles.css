@@ -1,8 +1,45 @@
-/*
+.jimmy-import-modal .jimmy-import-description {
+	margin-bottom: 1rem;
+	color: var(--text-muted);
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.jimmy-import-modal .jimmy-import-warning {
+	margin-bottom: 1rem;
+	padding: 0.75rem;
+	border-radius: var(--radius-s);
+	background-color: var(--background-modifier-error);
+	color: var(--text-error);
+}
 
-If your plugin does not need CSS, delete this file.
+.jimmy-import-modal .jimmy-import-log {
+	width: 100%;
+	min-height: 240px;
+	max-height: 360px;
+	overflow: auto;
+	margin: 1rem 0;
+	padding: 0.75rem;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background-color: var(--background-secondary);
+	font-family: var(--font-monospace);
+	font-size: var(--font-ui-smaller);
+	white-space: pre;
+	word-break: break-word;
+}
 
-*/
+.jimmy-import-modal .jimmy-import-actions {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: flex-end;
+	margin-top: 1rem;
+}
+
+.jimmy-import-modal .jimmy-import-input-row {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.jimmy-import-modal .jimmy-import-input-row input {
+	flex: 1;
+}
