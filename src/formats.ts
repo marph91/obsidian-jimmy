@@ -44,7 +44,12 @@ export async function fetchFormatsFromJimmy(
 					if (exitCode === 0) {
 						try {
 							// Parse the JSON output from stdout
-							const parsedFormats = JSON.parse(stdoutData);
+							const parsedFormats: {
+								[key: string]: {
+									accept_folder: boolean;
+									accepted_extensions: string[] | null;
+								};
+							} = JSON.parse(stdoutData);
 							let formats: JimmyFormat[] = [];
 							for (const [
 								format,
