@@ -24,7 +24,7 @@ export async function fetchFormatsFromJimmy(
 		let stderrData = '';
 
 		try {
-			const handle = runJimmy(
+			runJimmy(
 				{
 					jimmyPath,
 					inputPath: '',
@@ -50,7 +50,7 @@ export async function fetchFormatsFromJimmy(
 									accepted_extensions: string[] | null;
 								};
 							} = JSON.parse(stdoutData);
-							let formats: JimmyFormat[] = [];
+							const formats: JimmyFormat[] = [];
 							for (const [
 								format,
 								allowedInputs,
